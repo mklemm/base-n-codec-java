@@ -11,6 +11,35 @@
 
 	<name>Arbitrary radix octet encoder</name>
 	<packaging>jar</packaging>
+	<description>
+		Small utility library to encode binary data to a representation with arbitrary radix.
+		Any given alphabet can be used as a grammar for the encoding.
+	</description>
+	<url>http://mklemm.github.io/base-n-codec</url>
+
+	<scm>
+		<connection>scm:git:https://github.com/mklemm/base-n-codec-java.git</connection>
+		<developerConnection>scm:git:https://github.com/mklemm/base-n-codec-java.git</developerConnection>
+		<url>http://mklemm.github.io/base-n-codec</url>
+	</scm>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://opensource.org/licenses/MIT</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Mirko Klemm</name>
+			<email>mirko@cm-klemm.de</email>
+		</developer>
+	</developers>
+
+	<properties>
+		<github.global.server>github</github.global.server>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -23,31 +52,6 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>2.6</version>
-				<executions>
-					<execution>
-						<id>copy-resources</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${project.build.outputDirectory}</outputDirectory>
-							<resources>
-								<resource>
-									<directory>src/main/java</directory>
-									<includes>
-										<include>com/kscs/util/jaxb/*</include>
-									</includes>
-									<filtering>true</filtering>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
